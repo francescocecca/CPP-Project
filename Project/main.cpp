@@ -1,10 +1,10 @@
-#include "Characters/Character.hpp"
-#include "Characters/Friends.hpp"
+#include "Character.hpp"
+#include "Friends.hpp"
 
 void opening(Character &c);
 void closing(Character &c);
 void recap(Character &c, int conc, int know, int tired, int funny);
-void recap(Character &c, Friends &f, int conc, int know, int tired, int funny);
+void recap(Character &c, People &f, int conc, int know, int tired, int funny);
 
 int main(){
 
@@ -12,7 +12,8 @@ int main(){
     int ans;
 
     Character c;
-    Friends f;
+    Friends p(0,10,10);
+    People &f=p;
 
     opening(c);
 
@@ -199,11 +200,11 @@ void recap(Character &c, int conc, int know, int tired, int funny){
         cout << "" << endl;
 }
 
-void recap(Character &c, Friends &f, int conc, int know, int tired, int funny){
+void recap(Character &c, People &f, int conc, int know, int tired, int funny){
         
         f.setIntensity(f.getIntensity()+10);
 
-        c.setConcentration(c.getConcentration()+conc + f.getIntensity()*0.1);
+        c.setConcentration(c.getConcentration()+conc + f.getIntensity());
 
         if (c.getConcentration()>100){
             c.setConcentration(100);
@@ -213,7 +214,7 @@ void recap(Character &c, Friends &f, int conc, int know, int tired, int funny){
             c.setConcentration(0);
         }
 
-        c.setTiredness(c.getTiredness()+tired + f.getIntensity()*0.1);
+        c.setTiredness(c.getTiredness()+tired + f.getIntensity());
 
         if (c.getTiredness()>100){
             c.setTiredness(100);
@@ -222,7 +223,7 @@ void recap(Character &c, Friends &f, int conc, int know, int tired, int funny){
         if (c.getTiredness()<0){
             c.setTiredness(0);
         }
-        c.setFun(c.getFun()+funny + f.getIntensity()*0.1);
+        c.setFun(c.getFun()+funny + f.getIntensity());
 
         if (c.getFun()>100){
             c.setFun(100);
@@ -232,7 +233,7 @@ void recap(Character &c, Friends &f, int conc, int know, int tired, int funny){
             c.setFun(0);
         }
 
-        c.setKnowledge(c.getKnowledge()+know+f.getIntensity()*0.1);
+        c.setKnowledge(c.getKnowledge()+know+f.getIntensity());
 
         if (c.getKnowledge()>100){
             c.setKnowledge(100);

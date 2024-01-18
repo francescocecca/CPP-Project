@@ -2,16 +2,19 @@
 #include <string>
 using namespace std;
 
-class Friends{
+class People{
 
     private: 
 
     int intensity;
+    int fun;
 
     public:
 
-    Friends(int intensity=0);
+    People(int intensity=0, int fun=0);
 
-    int getIntensity();
+    virtual int getIntensity();
     void setIntensity(int intensity);
+    int getFun();
+    void SetFun(int fun);
 };
