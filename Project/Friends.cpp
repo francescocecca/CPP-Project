@@ -8,5 +8,6 @@ Friends::Friends(int intensity, int fun, int help){
 
 
 int Friends::getIntensity(){
-    return intensity*fun/2+help/3;
+    intensity=(intensity/10)*fun/2+help/3;
+    return intensity;
 }
