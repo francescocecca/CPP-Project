@@ -4,7 +4,7 @@ using namespace std;
 
 class People{
 
-    private: 
+    protected: 
 
     int intensity;
     int fun;

@@ -5,8 +5,6 @@ class Friends : public People{
     private:
 
     int help;
-    int intensity;
-    int fun;
 
     public:
 

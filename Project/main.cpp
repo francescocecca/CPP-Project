@@ -47,14 +47,14 @@ int main(){
     cout << "It's the night before the OOP lesson. What do you want to do now?" << endl;
 
     do{
-    cout << "Go to sleep / Go to the party and meet new friends [1/2]" << endl;
+    cout << "Go to sleep and arrive at class refreshed / Go to the party and meet new friends [1/2]" << endl;
     cin >> answer;
     ans=stoi(answer);
     
     } while( (ans != 1) && (ans != 2) ); 
 
     if(ans==1){
-        recap(c,20,20,(-20),(-20));
+        recap(c,20,10,(-20),(-20));
     }
 
     else{
@@ -64,10 +64,10 @@ int main(){
     // WEEK 3
 
     cout << "Third week" << endl;
-    cout << "It's Saturday. What do you want to do?" << endl;
+    cout << "You studied all the week and now it's Saturday. What do you want to do?" << endl;
 
     do{
-    cout << "Visit some places outside of Krakow / Go to ice rink with your friends [1/2]" << endl;
+    cout << "Solo-trip in Wroklaw / Go to ice rink with your friends [1/2]" << endl;
     cin >> answer;
     ans=stoi(answer);
     
@@ -83,7 +83,8 @@ int main(){
 
     // WEEK 4
 
-    cout << "It's the week before the exams. What do you want to do?" << endl;;
+    cout << "Fourth week" << endl;
+    cout << "You're behind in your studies. What do you want to do?" << endl;;
 
     do{
     cout << "Study hard all the week without stop / Study hard all the week and spend some chill night with your friend [1/2]" << endl;
@@ -93,12 +94,119 @@ int main(){
     } while( (ans != 1) && (ans != 2) ); 
 
         if(ans==1){
-        recap(c,10,20,-20,-20);
+        recap(c,10,10,-20,-20);
     }
 
     else{
-        recap(c,f,20,20,-10,10);
+        recap(c,f,20,15,-10,10);
     }
+
+    // WEEK 5
+
+    cout << "Fifth week" << endl;
+    cout << "Your friends are organizing a trip in Gdanz. What do you want to do?" << endl;
+
+    do{
+    cout << "Visit some city near Krakow (one-day trip) / Let's go !! (four-days trip) [1/2]" << endl;
+    cin >> answer;
+    ans=stoi(answer);
+    
+    } while( (ans != 1) && (ans != 2) ); 
+
+        if(ans==1){
+        recap(c,10,5,10,10);
+    }
+
+    else{
+        recap(c,f,-10,0,10,40);
+        cout << "WOW! You slept in the most dangerous neighorhood of Gdanz. You are strong." << endl;
+        cout << "" << endl;
+    }
+
+    // WEEK 6
+
+    cout << "Sixth week" << endl;
+    cout << "Holidays are coming. What do you want to do?" << endl;
+
+    do{
+    cout << "Return to your country / Spend the New Year's celebration in the Stare Miastro [1/2]" << endl;
+    cin >> answer;
+    ans=stoi(answer);
+    
+    } while( (ans != 1) && (ans != 2) ); 
+
+        if(ans==1){
+        recap(c,0,0,10,10);
+    }
+
+    else{
+        recap(c,10,10,10,10);
+    }
+
+    // WEEK 7
+
+    cout << "Seventh week" << endl;
+    cout << "All the Erasmus students came back to Krakow and ESN PK is organizing a week full of parties. What do you want to do?" << endl;
+
+    do{
+    cout << "I don't miss a single one / Alternate a day of party with a day of rest [1/2]" << endl;
+    cin >> answer;
+    ans=stoi(answer);
+    
+    } while( (ans != 1) && (ans != 2) ); 
+
+        if(ans==1){
+        recap(c,f,-30,-10,30,30);
+    }
+
+    else{
+        recap(c,f,-20,-5,20,20);
+    }
+
+    // WEEK 8
+
+    cout << "Eighth week" << endl;
+    cout << "The professor says that the students need to start working on them project. What do you want to do?" << endl;
+
+    do{
+    cout << "Start now / There are still two weeks, I'll starts in a few days [1/2]" << endl;
+    cin >> answer;
+    ans=stoi(answer);
+    
+    } while( (ans != 1) && (ans != 2) ); 
+
+        if(ans==1){
+        recap(c,f,10,10,0,0);
+    }
+
+    else{
+        recap(c,f,-10,-10,10,0);
+        cout << "Let's hope that few days don't become a week" << endl;
+    }
+
+
+
+    // WEEK 9
+
+    cout << "Ninth week" << endl;
+    cout << "It's the week before the exam. What do you want to do?" << endl;;
+
+    do{
+    cout << "Spend the whole week studying, I'll have fun later / Study during the day and spend the evenings at BaniaLuka with friends [1/2]" << endl;
+    cin >> answer;
+    ans=stoi(answer);
+    
+    } while( (ans != 1) && (ans != 2) ); 
+
+        if(ans==1){
+        recap(c,10,10,-10,-10);
+    }
+
+    else{
+        recap(c,f,-10,5,10,10);
+    }
+
+    // WEEK 10
 
     closing(c);
 
@@ -254,6 +362,7 @@ void recap(Character &c, People *f, int conc, int know, int tired, int funny){
         cout << "" << endl;
 
         cout << "Your friends helps your parameters" << endl;
+        cout << "" << endl;
 
 }
 
