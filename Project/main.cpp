@@ -210,6 +210,8 @@ int main(){
 
     closing(c);
 
+    delete f,p;
+
     return 0;
 }
 
